@@ -4,11 +4,7 @@ const amountEl = document.querySelector('input[name = "amount"]')
 const delayEl = document.querySelector('input[name = "delay"]')
 const stepEl = document.querySelector('input[name = "step"]')
 
-
 formEl.addEventListener('submit', onFormElSubmit)
-
-
-
 
 function onFormElSubmit(e) {
   e.preventDefault()
@@ -26,10 +22,7 @@ function onFormElSubmit(e) {
   Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
 })
     delayNum += stepNum
-    
   }
- 
-  
   }
     
 function createPromise(position, delay) {
