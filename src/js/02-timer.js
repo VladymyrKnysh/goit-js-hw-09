@@ -26,7 +26,6 @@ const options = {
   onClose(selectedDates) {
     if (selectedDates[0] < CURRENT_DAY) {
       Notiflix.Notify.failure('Please choose a date in the future');
-      // window.alert('Please choose a date in the future');
       refs.btnStart.disabled = true;
     } else {
       refs.btnStart.disabled = false;
@@ -37,12 +36,11 @@ const options = {
 };
 
 flatpickr(refs.input, options);
-require('flatpickr/dist/themes/confetti.css');
+// require('flatpickr/dist/themes/confetti.css');
 
 refs.btnStart.addEventListener('click', onStartBtnClick);
 
 function onStartBtnClick() {
-  // console.log(timeDiffence);
   refs.btnStart.disabled = true;
   timerId = setInterval(() => {
     timeDiffence = SELECTED_DAY - Date.now();
